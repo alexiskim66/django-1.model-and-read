@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>poetry</title>
+    <style>
+        body{text-align:center; background-color:darkseagreen;}
+        h1 {font-family: 'Courier New', Courier, monospace;
+            color:khaki;}
+        h3 {color:darkslategray;}
+        h5 {color:dimgray;}
+        div {font-family:'Courier New', Courier, monospace;}
+    </style>
+</head>
+<body>
+    <h1>poetry Blog</h1>
+    <div class="container">
+    <hr>
+    {% for d in data%}
+    <div>
+       <h3>{{d.subject}}</h3>
+       <h5>{{d.author}}</h5>
+       <br>
+       <h5>{{d.summary}}</h5>
+       <a href="{%url 'detail' d.id %}">read a poetry</a>
+    <hr>
+    <br>
+    </div>
+ {% endfor %}
+     </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail</title>
+    <style>
+        body{background-color:lavenderblush;}
+        h1 {text-align:center; color:rgb(63, 60, 60); }
+        #writer{color:rgb(63, 60, 60); padding-left: 70px;}
+        #date{color:rgb(63, 60, 60); padding-left: 70px;}
+        #text{text-align:center; color:grey; padding-left:100px;
+            padding-top:70px;}
+        #body{border: 2px solid grey;; border-radius: 100px;
+            margin: 50px;}
+    </style>
+</head>
+<body>
+    <h1>{{blog.subject}}</h1>
+    <div>
+    <p id="writer">작성자 : {{blog.author}}</p>
+    <p id='date'>작성일 : {{blog.publishing_date}}</p>
+    </div>
+    <hr>
+    <div id='body'>
+    <p id='text'>{{blog.contents | linebreaks }}</p>
+    </div>
+</body>
+</html>
